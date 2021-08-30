@@ -3,7 +3,6 @@ import menuData from './data/menu.json';
 // console.log(menuData);
 import menuMarkup from './templates/menuMarkup.hbs';
 // console.log(menuMarkup);
-import './js/menuMarkup';
 const menuList = document.querySelector('.js-menu');
 // console.log(menuList);
 const menuEls = createMenuEls(menuData);
