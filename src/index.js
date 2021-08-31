@@ -54,12 +54,8 @@ function applyLightTheme() {
 function themeSwitcher(evt) {
     if (evt.target.checked) {
         applyDarkTheme()
-        // refs.body.classList.replace(Theme.LIGHT, Theme.DARK);
-        // localStorage.setItem('Theme', Theme.DARK);
     }
     else {
         applyLightTheme()
-        // refs.body.classList.replace(Theme.DARK, Theme.LIGHT);
-        // localStorage.setItem('Theme', Theme.LIGHT);
     }
 };
