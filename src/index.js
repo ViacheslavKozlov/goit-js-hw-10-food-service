@@ -35,7 +35,6 @@ function savedTheme() {
         refs.body.classList.add(Theme.DARK);
     }
     else {
-        // refs.switcher.checked = !true;
         refs.body.classList.remove(Theme.DARK);
         refs.body.classList.add(Theme.LIGHT);
     }
