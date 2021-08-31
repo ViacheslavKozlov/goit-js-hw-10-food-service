@@ -35,19 +35,31 @@ function savedTheme() {
         refs.body.classList.add(Theme.DARK);
     }
     else {
-        refs.switcher.checked = !true;
+        // refs.switcher.checked = !true;
         refs.body.classList.remove(Theme.DARK);
         refs.body.classList.add(Theme.LIGHT);
     }
 };
 
+function applyDarkTheme() {
+    refs.body.classList.replace(Theme.LIGHT, Theme.DARK);
+    localStorage.setItem('Theme', Theme.DARK);
+};
+
+function applyLightTheme() {
+    refs.body.classList.replace(Theme.DARK, Theme.LIGHT);
+    localStorage.setItem('Theme', Theme.LIGHT);
+};
+
 function themeSwitcher(evt) {
     if (evt.target.checked) {
-        refs.body.classList.replace(Theme.LIGHT, Theme.DARK);
-        localStorage.setItem('Theme', Theme.DARK);
+        applyDarkTheme()
+        // refs.body.classList.replace(Theme.LIGHT, Theme.DARK);
+        // localStorage.setItem('Theme', Theme.DARK);
     }
     else {
-        refs.body.classList.replace(Theme.DARK, Theme.LIGHT);
-        localStorage.setItem('Theme', Theme.LIGHT);
+        applyLightTheme()
+        // refs.body.classList.replace(Theme.DARK, Theme.LIGHT);
+        // localStorage.setItem('Theme', Theme.LIGHT);
     }
 };
